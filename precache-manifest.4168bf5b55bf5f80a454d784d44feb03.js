@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16472914a347d5f6612937c8e0ce12fc",
+    "revision": "6c5c977c97869db56f61be5974fdebfb",
     "url": "/frinxio/index.html"
   },
   {
-    "revision": "1d4e63ebe6832becf710",
+    "revision": "99a58363b08e83074788",
     "url": "/frinxio/static/css/2.e05f5f1e.chunk.css"
   },
   {
-    "revision": "74ed4e36be6936f3329c",
-    "url": "/frinxio/static/css/main.4f6bb571.chunk.css"
+    "revision": "d422623662e7fced2ad7",
+    "url": "/frinxio/static/css/main.dff8e5ed.chunk.css"
   },
   {
-    "revision": "1d4e63ebe6832becf710",
-    "url": "/frinxio/static/js/2.3e158d28.chunk.js"
+    "revision": "99a58363b08e83074788",
+    "url": "/frinxio/static/js/2.e228bccc.chunk.js"
   },
   {
     "revision": "49c45e15b22906ea61e3b3085d227f58",
-    "url": "/frinxio/static/js/2.3e158d28.chunk.js.LICENSE.txt"
+    "url": "/frinxio/static/js/2.e228bccc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "74ed4e36be6936f3329c",
-    "url": "/frinxio/static/js/main.d4de68bf.chunk.js"
+    "revision": "d422623662e7fced2ad7",
+    "url": "/frinxio/static/js/main.bae963b0.chunk.js"
   },
   {
     "revision": "72f233c5ba3349c33bd0",
@@ -56,12 +56,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frinxio/static/media/bg-arrow.6c698b3c.png"
   },
   {
+    "revision": "77137ad7ed4e4790384619500612dd77",
+    "url": "/frinxio/static/media/chinatelecom.77137ad7.png"
+  },
+  {
     "revision": "aa73d45190f0ed729494f1f588c122d9",
     "url": "/frinxio/static/media/conductor.aa73d451.png"
   },
   {
     "revision": "b84e5da738ac4942200dd4400b3ac378",
     "url": "/frinxio/static/media/devices.b84e5da7.png"
+  },
+  {
+    "revision": "d307e37ddd701316afd264588ab85227",
+    "url": "/frinxio/static/media/dia1.d307e37d.png"
   },
   {
     "revision": "9f7d39769deb6de202512bf79499bc27",
@@ -80,6 +88,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frinxio/static/media/frinxmachine.ded92a64.png"
   },
   {
+    "revision": "fcec69678f4b07a6c20bab67f8964062",
+    "url": "/frinxio/static/media/laptop-frame.fcec6967.png"
+  },
+  {
     "revision": "76fc9aa252b70c510358bf5b9b4c1abc",
     "url": "/frinxio/static/media/python.76fc9aa2.png"
   },
@@ -88,11 +100,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frinxio/static/media/redis.518637fc.png"
   },
   {
+    "revision": "907a96fbffdd9d2ada9688e0e9e2df0f",
+    "url": "/frinxio/static/media/softbank.907a96fb.png"
+  },
+  {
     "revision": "7e8bd58899e85451d1dcb763d6aaa51f",
     "url": "/frinxio/static/media/terraform.7e8bd588.png"
   },
   {
     "revision": "52801f12612ef461dc41fcc673c6bcce",
     "url": "/frinxio/static/media/uniconfig.52801f12.png"
+  },
+  {
+    "revision": "2077a2ed74e66c1852e20cf3ae129ae4",
+    "url": "/frinxio/static/media/wf1.2077a2ed.png"
   }
 ]);

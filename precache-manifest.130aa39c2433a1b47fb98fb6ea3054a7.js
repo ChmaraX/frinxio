@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6c5c977c97869db56f61be5974fdebfb",
+    "revision": "0e23b12df70bbe58cfc77fca02b1b7e6",
     "url": "/frinxio/index.html"
   },
   {
-    "revision": "99a58363b08e83074788",
-    "url": "/frinxio/static/css/2.e05f5f1e.chunk.css"
+    "revision": "0240b0b7223bbb695c15",
+    "url": "/frinxio/static/css/main.e52936de.chunk.css"
   },
   {
-    "revision": "d422623662e7fced2ad7",
-    "url": "/frinxio/static/css/main.dff8e5ed.chunk.css"
-  },
-  {
-    "revision": "99a58363b08e83074788",
-    "url": "/frinxio/static/js/2.e228bccc.chunk.js"
+    "revision": "a6962c4b158b0b4e4024",
+    "url": "/frinxio/static/js/2.a898ca83.chunk.js"
   },
   {
     "revision": "49c45e15b22906ea61e3b3085d227f58",
-    "url": "/frinxio/static/js/2.e228bccc.chunk.js.LICENSE.txt"
+    "url": "/frinxio/static/js/2.a898ca83.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d422623662e7fced2ad7",
-    "url": "/frinxio/static/js/main.bae963b0.chunk.js"
+    "revision": "0240b0b7223bbb695c15",
+    "url": "/frinxio/static/js/main.976fe479.chunk.js"
   },
   {
     "revision": "72f233c5ba3349c33bd0",
@@ -72,20 +68,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frinxio/static/media/dia1.d307e37d.png"
   },
   {
+    "revision": "8828a5a38d0f6322f0733502dcc024a7",
+    "url": "/frinxio/static/media/dynomite.8828a5a3.png"
+  },
+  {
     "revision": "9f7d39769deb6de202512bf79499bc27",
     "url": "/frinxio/static/media/elastic.9f7d3976.png"
   },
   {
-    "revision": "c222ba9fb8c99c2be51c29f48c0495c3",
-    "url": "/frinxio/static/media/fm-perspective.c222ba9f.png"
+    "revision": "ea589f973e89ba8bd90520a1192a925c",
+    "url": "/frinxio/static/media/fm-perspective.ea589f97.png"
   },
   {
     "revision": "e1e614129e3617e9a458040cc40d499b",
     "url": "/frinxio/static/media/fm-stacked.e1e61412.png"
   },
   {
-    "revision": "ded92a644d7b5d005fefb0973a1816f4",
-    "url": "/frinxio/static/media/frinxmachine.ded92a64.png"
+    "revision": "52665d0ee51635f79851e1b53c050b0a",
+    "url": "/frinxio/static/media/frinxmachine.52665d0e.png"
   },
   {
     "revision": "fcec69678f4b07a6c20bab67f8964062",

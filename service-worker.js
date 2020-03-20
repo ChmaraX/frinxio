@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/frinxio/precache-manifest.5685e0af78f51946686e83f6449e7fbd.js"
+  "/frinxio/precache-manifest.4226b61f0575298e0da5d639c339b5cd.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a9f844a772a055b2ba9cb6a1592b5c7f",
+    "revision": "1224716470508ed8194b5c5a41f1691b",
     "url": "/frinxio/index.html"
   },
   {
-    "revision": "f4e9cfa4586826e05889",
+    "revision": "108c902595faf4079839",
     "url": "/frinxio/static/css/main.ecba71a9.chunk.css"
   },
   {
-    "revision": "f299ab982bc92e4ddd33",
-    "url": "/frinxio/static/js/2.3e6d45d5.chunk.js"
+    "revision": "1c07c6b513d03a48f772",
+    "url": "/frinxio/static/js/2.8942b420.chunk.js"
   },
   {
     "revision": "49c45e15b22906ea61e3b3085d227f58",
-    "url": "/frinxio/static/js/2.3e6d45d5.chunk.js.LICENSE.txt"
+    "url": "/frinxio/static/js/2.8942b420.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f4e9cfa4586826e05889",
-    "url": "/frinxio/static/js/main.e32aa83d.chunk.js"
+    "revision": "108c902595faf4079839",
+    "url": "/frinxio/static/js/main.3abf1c82.chunk.js"
   },
   {
     "revision": "72f233c5ba3349c33bd0",

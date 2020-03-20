@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/frinxio/static/css/main.ecba71a9.chunk.css",
-    "main.js": "/frinxio/static/js/main.e32aa83d.chunk.js",
-    "main.js.map": "/frinxio/static/js/main.e32aa83d.chunk.js.map",
+    "main.js": "/frinxio/static/js/main.3abf1c82.chunk.js",
+    "main.js.map": "/frinxio/static/js/main.3abf1c82.chunk.js.map",
     "runtime-main.js": "/frinxio/static/js/runtime-main.a2742fa1.js",
     "runtime-main.js.map": "/frinxio/static/js/runtime-main.a2742fa1.js.map",
-    "static/js/2.3e6d45d5.chunk.js": "/frinxio/static/js/2.3e6d45d5.chunk.js",
-    "static/js/2.3e6d45d5.chunk.js.map": "/frinxio/static/js/2.3e6d45d5.chunk.js.map",
+    "static/js/2.8942b420.chunk.js": "/frinxio/static/js/2.8942b420.chunk.js",
+    "static/js/2.8942b420.chunk.js.map": "/frinxio/static/js/2.8942b420.chunk.js.map",
     "index.html": "/frinxio/index.html",
-    "precache-manifest.5685e0af78f51946686e83f6449e7fbd.js": "/frinxio/precache-manifest.5685e0af78f51946686e83f6449e7fbd.js",
+    "precache-manifest.4226b61f0575298e0da5d639c339b5cd.js": "/frinxio/precache-manifest.4226b61f0575298e0da5d639c339b5cd.js",
     "service-worker.js": "/frinxio/service-worker.js",
     "static/css/main.ecba71a9.chunk.css.map": "/frinxio/static/css/main.ecba71a9.chunk.css.map",
-    "static/js/2.3e6d45d5.chunk.js.LICENSE.txt": "/frinxio/static/js/2.3e6d45d5.chunk.js.LICENSE.txt",
+    "static/js/2.8942b420.chunk.js.LICENSE.txt": "/frinxio/static/js/2.8942b420.chunk.js.LICENSE.txt",
     "static/media/about1.svg": "/frinxio/static/media/about1.593768c0.svg",
     "static/media/about2.svg": "/frinxio/static/media/about2.b76aabe2.svg",
     "static/media/about3.svg": "/frinxio/static/media/about3.1c31de46.svg",
@@ -35,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a2742fa1.js",
-    "static/js/2.3e6d45d5.chunk.js",
+    "static/js/2.8942b420.chunk.js",
     "static/css/main.ecba71a9.chunk.css",
-    "static/js/main.e32aa83d.chunk.js"
+    "static/js/main.3abf1c82.chunk.js"
   ]
 }

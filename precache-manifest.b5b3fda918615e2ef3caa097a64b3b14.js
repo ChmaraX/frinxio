@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1224716470508ed8194b5c5a41f1691b",
+    "revision": "0616c78a2c36945eb05ac58e41deb666",
     "url": "/frinxio/index.html"
   },
   {
-    "revision": "108c902595faf4079839",
-    "url": "/frinxio/static/css/main.ecba71a9.chunk.css"
+    "revision": "a23a5eac8dddc0269962",
+    "url": "/frinxio/static/css/main.fe910ed1.chunk.css"
   },
   {
-    "revision": "1c07c6b513d03a48f772",
-    "url": "/frinxio/static/js/2.8942b420.chunk.js"
+    "revision": "590d68c43a797616d29b",
+    "url": "/frinxio/static/js/2.38126433.chunk.js"
   },
   {
     "revision": "49c45e15b22906ea61e3b3085d227f58",
-    "url": "/frinxio/static/js/2.8942b420.chunk.js.LICENSE.txt"
+    "url": "/frinxio/static/js/2.38126433.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "108c902595faf4079839",
-    "url": "/frinxio/static/js/main.3abf1c82.chunk.js"
+    "revision": "a23a5eac8dddc0269962",
+    "url": "/frinxio/static/js/main.51ac4e37.chunk.js"
   },
   {
     "revision": "72f233c5ba3349c33bd0",
@@ -88,6 +88,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frinxio/static/media/frinxmachine.52665d0e.png"
   },
   {
+    "revision": "805e508b4001862553996f1d06dec995",
+    "url": "/frinxio/static/media/infradata.805e508b.png"
+  },
+  {
     "revision": "fcec69678f4b07a6c20bab67f8964062",
     "url": "/frinxio/static/media/laptop-frame.fcec6967.png"
   },
@@ -110,10 +114,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "52801f12612ef461dc41fcc673c6bcce",
     "url": "/frinxio/static/media/uniconfig.52801f12.png"
-  },
-  {
-    "revision": "91551b02281b22186ace529c5b01c570",
-    "url": "/frinxio/static/media/vodafone.91551b02.png"
   },
   {
     "revision": "2077a2ed74e66c1852e20cf3ae129ae4",

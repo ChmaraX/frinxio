@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/frinxio/static/css/main.ecba71a9.chunk.css",
-    "main.js": "/frinxio/static/js/main.3abf1c82.chunk.js",
-    "main.js.map": "/frinxio/static/js/main.3abf1c82.chunk.js.map",
+    "main.css": "/frinxio/static/css/main.fe910ed1.chunk.css",
+    "main.js": "/frinxio/static/js/main.51ac4e37.chunk.js",
+    "main.js.map": "/frinxio/static/js/main.51ac4e37.chunk.js.map",
     "runtime-main.js": "/frinxio/static/js/runtime-main.a2742fa1.js",
     "runtime-main.js.map": "/frinxio/static/js/runtime-main.a2742fa1.js.map",
-    "static/js/2.8942b420.chunk.js": "/frinxio/static/js/2.8942b420.chunk.js",
-    "static/js/2.8942b420.chunk.js.map": "/frinxio/static/js/2.8942b420.chunk.js.map",
+    "static/js/2.38126433.chunk.js": "/frinxio/static/js/2.38126433.chunk.js",
+    "static/js/2.38126433.chunk.js.map": "/frinxio/static/js/2.38126433.chunk.js.map",
     "index.html": "/frinxio/index.html",
-    "precache-manifest.4226b61f0575298e0da5d639c339b5cd.js": "/frinxio/precache-manifest.4226b61f0575298e0da5d639c339b5cd.js",
+    "precache-manifest.b5b3fda918615e2ef3caa097a64b3b14.js": "/frinxio/precache-manifest.b5b3fda918615e2ef3caa097a64b3b14.js",
     "service-worker.js": "/frinxio/service-worker.js",
-    "static/css/main.ecba71a9.chunk.css.map": "/frinxio/static/css/main.ecba71a9.chunk.css.map",
-    "static/js/2.8942b420.chunk.js.LICENSE.txt": "/frinxio/static/js/2.8942b420.chunk.js.LICENSE.txt",
+    "static/css/main.fe910ed1.chunk.css.map": "/frinxio/static/css/main.fe910ed1.chunk.css.map",
+    "static/js/2.38126433.chunk.js.LICENSE.txt": "/frinxio/static/js/2.38126433.chunk.js.LICENSE.txt",
     "static/media/about1.svg": "/frinxio/static/media/about1.593768c0.svg",
     "static/media/about2.svg": "/frinxio/static/media/about2.b76aabe2.svg",
     "static/media/about3.svg": "/frinxio/static/media/about3.1c31de46.svg",
@@ -26,17 +26,17 @@
     "static/media/fm-perspective.png": "/frinxio/static/media/fm-perspective.ea589f97.png",
     "static/media/fm-stacked.png": "/frinxio/static/media/fm-stacked.e1e61412.png",
     "static/media/frinxmachine.png": "/frinxio/static/media/frinxmachine.52665d0e.png",
+    "static/media/infradata.png": "/frinxio/static/media/infradata.805e508b.png",
     "static/media/python.png": "/frinxio/static/media/python.76fc9aa2.png",
     "static/media/redis.png": "/frinxio/static/media/redis.518637fc.png",
     "static/media/softbank.png": "/frinxio/static/media/softbank.907a96fb.png",
     "static/media/terraform.png": "/frinxio/static/media/terraform.7e8bd588.png",
-    "static/media/uniconfig.png": "/frinxio/static/media/uniconfig.52801f12.png",
-    "static/media/vodafone.png": "/frinxio/static/media/vodafone.91551b02.png"
+    "static/media/uniconfig.png": "/frinxio/static/media/uniconfig.52801f12.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a2742fa1.js",
-    "static/js/2.8942b420.chunk.js",
-    "static/css/main.ecba71a9.chunk.css",
-    "static/js/main.3abf1c82.chunk.js"
+    "static/js/2.38126433.chunk.js",
+    "static/css/main.fe910ed1.chunk.css",
+    "static/js/main.51ac4e37.chunk.js"
   ]
 }

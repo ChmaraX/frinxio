@@ -3,17 +3,34 @@ const https = require("https");
 const path = require("path");
 const fs = require("fs");
 
-const bodyParser = require("body-parser");
 const app = express();
 const axios = require("axios");
 
 app.use(express.static(path.join(__dirname, "build")));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.get("/license/:email", async function(req, res) {
   try {
     const result = await axios.get(
       `${process.env.LICENSE_SERVER_URL}/customer/` + req.params.email,
+      {
+        headers: {
+          Authorization: `Basic ${process.env.LICENSE_SERVER_AUTH_TOKEN}`
+        }
+      }
+    );
+    res.status(200).send(result.data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send();
+  }
+});
+
+app.put("/trial-license/", async function(req, res) {
+  try {
+    const result = await axios.put(
+      `${process.env.LICENSE_SERVER_URL}/obtain-trial-secret/`,
+      { email: req.body.email },
       {
         headers: {
           Authorization: `Basic ${process.env.LICENSE_SERVER_AUTH_TOKEN}`

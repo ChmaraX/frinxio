@@ -13,10 +13,14 @@ function Profile({ history }) {
 
   useEffect(() => {
     const email = currentUser.email;
-    console.log("sss");
     axios.get("/license/" + email).then(res => {
-      console.log(res.data);
-      setLicense(res.data);
+      let licenseData = res.data;
+      setLicense(licenseData);
+      if (res.data.licenseType.name === "TRIAL") {
+        axios.put("/trial-license", { email }).then(res => {
+          setLicense({ ...licenseData, licenses: [{ token: res.data.token }] });
+        });
+      }
     });
   }, []);
 
@@ -31,7 +35,7 @@ function Profile({ history }) {
           <div className="license-info">
             <div className="token">
               <h2>My secret token</h2>
-              <pre>{license?.licenses[0].token}</pre>
+              <pre>{license?.licenses[0]?.token}</pre>
             </div>
             <h2>My license information</h2>
             <div className="info">
@@ -39,28 +43,28 @@ function Profile({ history }) {
                 <Grid.Row columns={2}>
                   <Grid.Column className="info-type">
                     <p>
-                      License Type: <span>{license?.licenseType.name}</span>
+                      License Type: <span>{license?.licenseType?.name}</span>
                     </p>
                     <p>
                       Licenses of registered devices:{" "}
-                      <span>{license?.licenses.length}</span>
+                      <span>{license?.licenses?.length}</span>
                     </p>
                     <p>
                       Number of Licenses left:{" "}
-                      <span>99 out of {license?.licenseType.maxCount}</span>
+                      <span>1 out of {license?.licenseType?.maxCount}</span>
                     </p>
                   </Grid.Column>
                   <Grid.Column className="info-type">
                     <p>
-                      Created Date: <span>{license?.licenses[0].created}</span>
+                      Created Date: <span>{license?.licenses[0]?.created}</span>
                     </p>
                     <p>
                       Expiry Date:{" "}
-                      <span>{license?.licenses[0].expiryDate}</span>
+                      <span>{license?.licenses[0]?.expiryDate}</span>
                     </p>
                     <p>
                       Hostname:{" "}
-                      <span>{license?.licenses[0]?.fingerprint.hostname}</span>
+                      <span>{license?.licenses[0]?.fingerprint?.hostname}</span>
                     </p>
                   </Grid.Column>
                 </Grid.Row>

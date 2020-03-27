@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useCallback, useContext } from "react";
 import { Redirect } from "react-router";
 import { Button, Checkbox, Form } from "semantic-ui-react";
@@ -27,6 +28,8 @@ function Register({ history }) {
         await fire
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
+
+        await axios.put("/trial-license", { email: email.value });
       } catch (error) {
         alert(error);
       }

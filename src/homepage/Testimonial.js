@@ -33,7 +33,7 @@ function Testimonial() {
     <OverPack className="testimonial" playScale={0.3}>
       <div className="testimonial-title">
         <h2>Testimonial</h2>
-        <h1>Trusted by companies</h1>
+        <h1>Trusted by industry leaders</h1>
       </div>
       <Grid>
         <Grid.Row className="home-page" columns={3} stretched>

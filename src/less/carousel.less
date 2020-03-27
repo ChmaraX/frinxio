@@ -1,0 +1,76 @@
+@carousel: carousel;
+@slider: slider;
+
+.@{carousel}-wrapper {
+  padding: 40px;
+  margin-bottom: 40px;
+  background-color: rgb(231, 231, 231);
+
+  .@{carousel}-content {
+    text-align: center;
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font: 600 30px/45px "Poppins", sans-serif;
+      color: #282835;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: grey;
+      text-align: center;
+      line-height: 0em;
+      font-weight: 500;
+      font-family: Quicksand, sans-serif;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  }
+
+  .@{slider} {
+    padding: 30px;
+
+    &-img {
+      margin: auto;
+      height: 306px;
+      width: 294px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    &-frame {
+      background-image: url("../images/laptop-frame.png");
+      background-size: contain;
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      width: 600px;
+    }
+  }
+}
+
+.wf1 {
+  background-image: url("../images/fm/wf1.png");
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+}
+
+.slick-current .wf1 {
+  position: relative;
+  top: 29px;
+  left: -3px;
+  width: 454px;
+  height: 240px;
+  background-image: url("../images/fm/dia1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: none;
+}

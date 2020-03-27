@@ -1,0 +1,48 @@
+@joinus: joinus;
+
+.@{joinus}-wrapper {
+  display: flex;
+  background-image: url("../images/bgs/banner1.jpg");
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.pulse-bg,
+.pulse-button {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.pulse-bg {
+  animation: pulse 1.2s ease infinite;
+  background: white;
+}
+
+.pulse-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  border: none;
+  background: white;
+  background-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

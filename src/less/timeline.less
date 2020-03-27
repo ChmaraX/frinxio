@@ -1,0 +1,147 @@
+@timeline: timeline;
+@text-color: rgba(0, 0, 0, 0.85);
+
+.@{timeline}-wrapper {
+  padding-bottom: 24px;
+  padding-top: 64px;
+  margin-left: 10px;
+
+  &.home-page-wrapper {
+    overflow: initial;
+  }
+  .@{timeline} {
+    min-height: 800px;
+  }
+  .timeline {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -20%;
+      width: 0;
+      z-index: -1;
+      height: ~"calc(100% + 150px)";
+      margin: 34px 0;
+      border-left: 2px #ebedf0 dashed;
+    }
+  }
+  .block-wrapper {
+    color: @text-color;
+    display: flex;
+    position: relative;
+    margin-bottom: 70px;
+    min-height: 160px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .image-wrapper,
+  .text-wrapper {
+    width: 50%;
+  }
+  .image-wrapper {
+    text-align: center;
+    .name-wrapper {
+      float: right;
+      clear: both;
+      width: 262px;
+      margin: auto;
+    }
+    .block-img {
+      height: 250px;
+      margin: auto;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .text-wrapper {
+    padding: 40px;
+
+    .block-title {
+      margin: 8px 0 12px;
+      font-size: 24px;
+      position: relative;
+      min-height: 18px;
+      line-height: 1.2;
+      font-weight: 600;
+      font-family: Quicksand, sans-serif;
+    }
+    .block-icon {
+      position: absolute;
+      left: -40px;
+      transform: translateX(~"calc(-50% + 1px)");
+    }
+    .block-content {
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #6f7982;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{timeline}-wrapper {
+    padding-bottom: 0;
+
+    .timeline {
+      &:before {
+        left: 0;
+        height: 100%;
+        margin: 0;
+      }
+    }
+    .block-wrapper {
+      display: block;
+      min-height: 100px;
+      margin-bottom: 54px;
+    }
+
+    .image-wrapper,
+    .text-wrapper {
+      width: 100%;
+    }
+
+    .image-wrapper {
+      .block-img {
+        display: none;
+      }
+      .name-wrapper {
+        text-align: left;
+        float: left;
+        width: 100%;
+        padding-left: 40px;
+        margin: auto;
+      }
+    }
+
+    .text-wrapper {
+      padding: 0 40px 0 40px;
+      .block-title {
+        margin: 8px 0 12px;
+        font-size: 24px;
+        position: relative;
+        min-height: 18px;
+      }
+      .block-icon {
+        position: absolute;
+        left: -40px;
+        transform: translateX(~"calc(-50% + 1px)");
+      }
+      .block-content {
+        width: 100%;
+        color: #314659;
+        font-size: 14px;
+        min-height: 18px;
+      }
+    }
+  }
+}

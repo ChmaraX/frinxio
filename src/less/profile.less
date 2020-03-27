@@ -1,0 +1,70 @@
+@profile: profile;
+
+.@{profile}-wrapper {
+  height: 770px;
+  position: absolute;
+  z-index: 10;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  padding: 60px;
+
+  .@{profile} {
+    &-title {
+      text-align: center;
+
+      h1 {
+        font: 600 30px/45px "Poppins", sans-serif;
+        color: #282835;
+      }
+
+      h2 {
+        color: #2185d0;
+        text-align: center;
+        font-weight: 500;
+        font-family: Quicksand, sans-serif;
+      }
+    }
+
+    &-content {
+      margin: 20px;
+      h2 {
+        font-size: 20px;
+        color: #2185d0;
+        font-family: Quicksand, sans-serif;
+      }
+
+      .license-info {
+        pre {
+          font-size: 16px;
+          max-width: 100%;
+          overflow: scroll;
+          background-color: whitesmoke;
+        }
+
+        .info {
+          margin-bottom: 50px;
+          &-type {
+            span {
+              color: #2185d0;
+              float: right;
+            }
+          }
+        }
+      }
+
+      .settings {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

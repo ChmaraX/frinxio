@@ -1,0 +1,36 @@
+@blog: blog;
+
+.@{blog}-wrapper {
+  width: 100%;
+  background: linear-gradient(to top, #2d3e50 70%, #03aaff 20%);
+  min-height: 680px;
+
+  .@{blog} {
+    text-align: center;
+
+    &-title {
+      h2 {
+        color: whitesmoke;
+        text-align: center;
+        line-height: 1.2;
+        font-weight: 500;
+        font-family: Quicksand, sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        font: 600 30px/45px "Poppins", sans-serif;
+        color: white;
+      }
+    }
+
+    &-posts {
+      .post {
+        padding: 10px;
+        text-align: left;
+        height: 500px;
+      }
+    }
+  }
+}

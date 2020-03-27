@@ -1,0 +1,61 @@
+@careers: careers;
+
+.@{careers}-wrapper {
+  min-height: 100vh;
+
+  .@{careers}-bg {
+    background-image: url("../images/bgs/auth-bg.png");
+    height: 500px;
+  }
+
+  .@{careers}-content-wrapper {
+    max-width: 80vw;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    padding: 60px;
+    margin-bottom: 100px;
+
+    .@{careers}-title {
+      text-align: center;
+
+      h1 {
+        font: 600 30px/45px "Poppins", sans-serif;
+        color: #282835;
+      }
+      h2 {
+        color: #2185d0;
+        font-weight: 500;
+        font-size: 1.5em;
+        font-family: Quicksand, sans-serif;
+      }
+    }
+
+    .@{careers}-content {
+      margin-top: 60px;
+
+      .@{careers}-details {
+        p {
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 24px;
+          color: #6f7982;
+          margin: 0;
+        }
+        h3 {
+          color: #2185d0;
+        }
+
+        &-list {
+          padding: 5px 0 20px 40px;
+        }
+      }
+    }
+  }
+}

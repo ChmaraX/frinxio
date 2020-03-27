@@ -1,0 +1,125 @@
+@banner: banner;
+
+.@{banner} {
+  width: 100%;
+  height: 812px;
+  position: relative;
+  background-image: url("../images/bgs/banner1.jpg");
+  overflow: hidden;
+
+  & &-page {
+    max-width: 1300px;
+  }
+
+  &-title {
+    font-size: 48px;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+
+    &-wrapper {
+      position: relative;
+      top: 28%;
+      width: 50%;
+      max-width: 550px;
+      left: 70px;
+      z-index: 3;
+    }
+  }
+
+  &-explain {
+    font-size: 24px;
+    line-height: 2rem;
+    margin-bottom: 24px;
+    color: white;
+  }
+
+  &-release {
+    color: white;
+    font-size: 24;
+    padding: 5px;
+    padding-left: 10px;
+    width: 75%;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: width 0.1s ease-in-out;
+
+    &:hover {
+      width: 78%;
+    }
+  }
+
+  &-content {
+    font-size: 18px;
+    color: #e9e9e9;
+    margin-bottom: 48px;
+    line-height: 1.2;
+    font-family: Quicksand, sans-serif;
+  }
+
+  &-button {
+    background-color: white !important;
+    margin-right: 10px !important;
+  }
+
+  &-image {
+    overflow: hidden;
+    width: 65%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{banner} {
+    min-height: 500px;
+
+    & &-page.home-page {
+      padding-top: 1px;
+      padding-bottom: 0;
+    }
+
+    &-title-wrapper {
+      text-align: center;
+      position: static;
+      width: 100%;
+      margin-top: 64px;
+      left: 0;
+      top: 0;
+    }
+
+    &-title {
+      font-size: 32px;
+    }
+
+    &-explain {
+      font-size: 18px;
+    }
+
+    &-content {
+      font-size: 14px;
+    }
+
+    &-release {
+      display: none;
+    }
+
+    &-particles {
+      display: none;
+    }
+
+    &-image {
+      position: static;
+      width: 100%;
+      top: 0;
+      right: 0;
+      margin: 32px 0 24px;
+    }
+  }
+}

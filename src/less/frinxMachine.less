@@ -1,0 +1,61 @@
+@frinxMachine: frinxMachine;
+
+.@{frinxMachine}-wrapper {
+  width: 100%;
+  background-image: url("../images/bgs/bg-arrow.png");
+  background-size: 100vw 757px;
+}
+
+.@{frinxMachine}-page {
+  min-height: 740px;
+  height: 100%;
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: auto;
+
+  .@{frinxMachine}-title > h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font: 600 30px/45px "Poppins", sans-serif;
+    color: #282835;
+  }
+
+  .@{frinxMachine}-title > h2 {
+    font-size: 20px;
+    color: #2185d0;
+    text-align: center;
+    line-height: 1.2;
+    font-family: Quicksand, sans-serif;
+  }
+
+  .@{frinxMachine}-content {
+    &-block {
+      margin: 20px;
+      h3 {
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 700;
+        font-family: Quicksand, sans-serif;
+      }
+    }
+  }
+
+  .@{frinxMachine}-image {
+    position: relative;
+    transform: rotate(10deg);
+    top: -80px;
+    left: -40%;
+
+    img {
+      height: 135%;
+      width: 135%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{frinxMachine}-wrapper {
+    min-height: 620px;
+    height: 100%;
+  }
+}

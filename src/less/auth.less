@@ -1,0 +1,62 @@
+@auth: auth;
+@login: login;
+@register: register;
+@form: form;
+
+.@{auth}-wrapper {
+  min-height: 92vh;
+
+  .@{auth}-bg {
+    background-image: url("../images/bgs/auth-bg.png");
+    height: 500px;
+  }
+
+  .@{login}-wrapper {
+    height: 500px;
+  }
+  .@{register}-wrapper {
+    height: 700px;
+  }
+  .@{form}-wrapper {
+    position: absolute;
+    max-width: 600px;
+    z-index: 10;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    padding: 60px;
+
+    .@{form}-title > h1 {
+      text-align: center;
+      font: 600 30px/45px "Poppins", sans-serif;
+      color: #282835;
+    }
+
+    .@{form}-box {
+      margin-top: 30px;
+    }
+
+    .@{form}-links {
+      width: 100%;
+      margin-top: 15px;
+
+      &-login {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          cursor: pointer;
+        }
+      }
+
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}

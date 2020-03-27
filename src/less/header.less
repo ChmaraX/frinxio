@@ -1,0 +1,55 @@
+@header: header;
+
+.@{header} {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+
+  .home-page {
+    padding: 0 24px;
+  }
+
+  &-logo {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    line-height: 64px;
+  }
+
+  &-menu {
+    line-height: 62px;
+    height: 64px;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    cursor: pointer;
+
+    .item {
+      color: rgb(235, 235, 235) !important;
+      padding: 3px !important;
+
+      &:before {
+        background: none !important;
+      }
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      padding: 0.92857143em 1.14285714em;
+
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+
+  .icon {
+    margin-left: 20px;
+    color: white;
+    &:hover {
+      cursor: pointer;
+      color: rgb(211, 211, 211);
+    }
+  }
+}

@@ -1,67 +1,38 @@
+import axios from "axios";
 import OverPack from "rc-scroll-anim/lib/ScrollOverPack";
 import TweenOne from "rc-tween-one";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Button, Card, Image } from "semantic-ui-react";
 
-const blogPosts = [
-  {
-    title: "FRINX releases FRINX Machine 1.1",
-    date: "February 21, 2020 - 4:04pm",
-    img:
-      "https://frinx.io/wp-content/uploads/2020/02/Screen-Shot-2020-02-21-at-2.18.03-PM-1536x764.png",
-    description:
-      "FRINX has released FRINX Machine 1.1, the latest version of its flagship network automation solution. FRINX Machine combines the ability to build and manage..."
-  },
-  {
-    title: "Getting IO Right",
-    date: "February 5, 2020 - 5:56pm",
-    img:
-      "https://frinx.io/wp-content/uploads/2020/01/Screen-Shot-2020-01-22-at-5.45.49-PM-1030x508.png",
-    description:
-      "We recently embarked on a new project in a subject that we were familiar with (network configuration at scale) and that we have..."
-  },
-  {
-    title: "Second time's a charm",
-    date: "February 5, 2020 - 5:34pm",
-    img:
-      "https://frinx.io/wp-content/uploads/2020/01/Cumulus_workflow-1030x536.png",
-    description:
-      "Second time’s a charm Conventional wisdom says that it is not a good use of time to rewrite existing code with new technologies..."
-  },
-  {
-    title: "FRINX releases FRINX Machine 1.1",
-    date: "February 21, 2020 - 4:04pm",
-    img:
-      "https://frinx.io/wp-content/uploads/2020/02/Screen-Shot-2020-02-21-at-2.18.03-PM-1536x764.png",
-    description:
-      "FRINX has released FRINX Machine 1.1, the latest version of its flagship network automation solution. FRINX Machine combines the ability to build and manage..."
-  },
-  {
-    title: "Getting IO Right",
-    date: "February 5, 2020 - 5:56pm",
-    img:
-      "https://frinx.io/wp-content/uploads/2020/01/Screen-Shot-2020-01-22-at-5.45.49-PM-1030x508.png",
-    description:
-      "We recently embarked on a new project in a subject that we were familiar with (network configuration at scale) and that we have..."
-  },
-  {
-    title: "Second time's a charm",
-    date: "February 5, 2020 - 5:34pm",
-    img:
-      "https://frinx.io/wp-content/uploads/2020/01/Cumulus_workflow-1030x536.png",
-    description:
-      "Second time’s a charm Conventional wisdom says that it is not a good use of time to rewrite existing code with new technologies..."
-  }
-];
-
 function Blog() {
+  const [blogPosts, setBlogPosts] = useState([]);
   var settings = {
     arrows: true,
     speed: 500,
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1
+  };
+
+  useEffect(() => {
+    let blogId = process.env.REACT_APP_BLOG_ID;
+    let blogAPIKey = process.env.REACT_APP_BLOGGER_API_KEY;
+    axios
+      .get(
+        `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${blogAPIKey}`
+      )
+      .then(res => {
+        let blogPosts = res?.data?.items || [];
+        setBlogPosts(blogPosts);
+      });
+  }, []);
+
+  const parsePost = post => {
+    const parser = new DOMParser();
+    const html = parser.parseFromString(post.content, "text/html");
+    const imgUrl = html.querySelector("img")?.src || "";
+    return { html, imgUrl };
   };
 
   return (
@@ -94,7 +65,7 @@ function Blog() {
                     }}
                   >
                     <Image
-                      src={b.img}
+                      src={parsePost(b).imgUrl}
                       wrapped
                       ui={false}
                       style={{ maxHeight: "150px", overflow: "hidden" }}
@@ -110,26 +81,32 @@ function Blog() {
                         {b.title}
                       </Card.Header>
                       <Card.Meta>
-                        <span className="date">{b.date}</span>
+                        <span className="date">
+                          {new Date(b.published).toDateString()}
+                        </span>
                       </Card.Meta>
-                      <Card.Description
-                        style={{
-                          height: "100px",
-                          overflow: "hidden"
-                        }}
-                      >
-                        {b.description}
+                      <Card.Description className="post-description">
+                        {b.content.replace(/<\/?[^>]+>/gi, "")}
                       </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                      <a>Read more</a>
+                      <a href={b.url} target="_blank">
+                        Read more
+                      </a>
                     </Card.Content>
                   </Card>
                 </div>
               );
             })}
           </Slider>
-          <Button circular>Show More Posts</Button>
+          <Button
+            onClick={() =>
+              window.open("https://frinxio.blogspot.com/", "_blank")
+            }
+            circular
+          >
+            Show More Posts
+          </Button>
         </div>
       </TweenOne>
     </OverPack>

@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     text:
-      "Automation is key to reducing cost, eliminating human errors and increasing speed. This allows us to integrate it in any environment at the speed of light.",
+      "The FRINX partnership enriched our automation framework and capabilities. The FRINX solution is vendor agnostic, uses open source components and allows us to integrate it in any environment at the speed of light.",
     author: "Mohamed El Haddouchi, Group CTO @ InfraData",
     logo: infradataImg
   }

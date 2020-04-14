@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import { Form, Grid, Input, Radio } from "semantic-ui-react";
+import { MobileContext } from "../common/MobileProvider";
 import fire from "../config/Fire";
 import { AuthContext } from "./AuthProvider";
 
@@ -10,14 +11,15 @@ function Profile({ history }) {
   const [email, setEmail] = useState();
   const { currentUser } = useContext(AuthContext);
   const [license, setLicense] = useState();
+  const { isMobile } = useContext(MobileContext);
 
   useEffect(() => {
     const email = currentUser.email;
-    axios.get("/license/" + email).then(res => {
+    axios.get("/license/" + email).then((res) => {
       let licenseData = res.data;
       setLicense(licenseData);
       if (res.data.licenseType.name === "TRIAL") {
-        axios.put("/trial-license", { email }).then(res => {
+        axios.put("/trial-license", { email }).then((res) => {
           setLicense({ ...licenseData, licenses: [{ token: res.data.token }] });
         });
       }
@@ -40,7 +42,7 @@ function Profile({ history }) {
             <h2>My license information</h2>
             <div className="info">
               <Grid>
-                <Grid.Row columns={2}>
+                <Grid.Row columns={1}>
                   <Grid.Column className="info-type">
                     <p>
                       License Type: <span>{license?.licenseType?.name}</span>
@@ -86,7 +88,7 @@ function Profile({ history }) {
                   iconPosition="left"
                   placeholder="Enter your email address"
                   action="Submit"
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Form.Field>
               <Form.Field>

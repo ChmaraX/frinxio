@@ -1,45 +1,74 @@
 import axios from "axios";
-import React, { useCallback, useContext } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { Redirect } from "react-router";
 import { Button, Checkbox, Form } from "semantic-ui-react";
 import fire from "../config/Fire";
 import { AuthContext } from "./AuthProvider";
 import AuthWrapper from "./AuthWrapper";
 
+const firebase = require("firebase/app");
+
 function Register({ history }) {
   const { currentUser } = useContext(AuthContext);
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+    passwordConfirm: "",
+    tos: false,
+  });
 
-  const handleRegister = useCallback(
-    async event => {
-      event.preventDefault();
-      const { email, password, passwordConfirm, tos } = event.target.elements;
-
-      if (password.value !== passwordConfirm.value) {
-        return alert("Passwords does not match!");
+  useEffect(() => {
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+      "register-btn",
+      {
+        size: "invisible",
+        callback: () => window.handleRegister(),
       }
+    );
+    window.recaptchaVerifier.render();
 
-      if (!tos.checked) {
-        return alert(
-          "You need to agree with our Terms of Service in order to create new account."
-        );
-      }
+    return (window.handleRegister = undefined);
+  }, []);
 
-      try {
-        await fire
-          .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
+  window.handleRegister = useCallback(async () => {
+    const { email, password, passwordConfirm, tos } = user;
 
-        await axios.put("/trial-license", { email: email.value });
-      } catch (error) {
-        alert(error);
-      }
-    },
-    [history]
-  );
+    if (password !== passwordConfirm) {
+      alert("Passwords does not match!");
+      return window.location.reload();
+    }
+
+    if (!tos) {
+      alert(
+        "You need to agree with our Terms of Service in order to create new account."
+      );
+      return window.location.reload();
+    }
+
+    try {
+      await fire.auth().createUserWithEmailAndPassword(email, password);
+    } catch (error) {
+      alert(error);
+      return window.location.reload();
+    }
+
+    try {
+      await axios.put("/trial-license", { email });
+    } catch (error) {
+      console.log("License server is unavailable.");
+    }
+  }, [user]);
 
   if (currentUser) {
     return <Redirect to="/" />;
   }
+
+  const onUserChange = (e) => {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <AuthWrapper>
@@ -48,14 +77,24 @@ function Register({ history }) {
           <h1>Sign Up</h1>
         </div>
         <div className="form-box">
-          <Form onSubmit={handleRegister}>
+          <Form onSubmit={window.handleRegister}>
             <Form.Field>
               <label>Email</label>
-              <input type="email" name="email" placeholder="Email" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={(e) => onUserChange(e)}
+              />
             </Form.Field>
             <Form.Field>
               <label>Password</label>
-              <input type="password" name="password" placeholder="*******" />
+              <input
+                type="password"
+                name="password"
+                placeholder="*******"
+                onChange={(e) => onUserChange(e)}
+              />
             </Form.Field>
             <Form.Field>
               <label>Confirm Password</label>
@@ -63,15 +102,18 @@ function Register({ history }) {
                 type="password"
                 name="passwordConfirm"
                 placeholder="*******"
+                onChange={(e) => onUserChange(e)}
               />
             </Form.Field>
             <Form.Field>
               <Checkbox
                 name="tos"
+                checked={user.tos}
                 label="Please indicate that you agree to the Terms of Service"
+                onChange={() => setUser({ ...user, tos: !user.tos })}
               />
             </Form.Field>
-            <Button circular primary fluid type="submit">
+            <Button circular primary fluid type="submit" id="register-btn">
               Sign Up
             </Button>
             <div className="form-links">

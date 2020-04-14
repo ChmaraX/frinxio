@@ -1,9 +1,15 @@
 import React from "react";
+import { Button, Icon } from "semantic-ui-react";
 
-function ContactUs() {
+function ContactUs(props) {
   return (
     <div className="aboutus-wrapper">
       <div className="aboutus-content-wrapper">
+        <div style={{ textAlign: "right" }}>
+          <Button circular icon onClick={() => props.history.push("/")}>
+            <Icon name="close" />
+          </Button>
+        </div>
         <div className="aboutus-title">
           <h2>About</h2>
           <h1>Contact Us</h1>

@@ -1,7 +1,8 @@
 import OverPack from "rc-scroll-anim/lib/ScrollOverPack";
 import TweenOne from "rc-tween-one";
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Grid, Image } from "semantic-ui-react";
+import { MobileContext } from "../../common/MobileProvider";
 import fmStacked from "../../images/fm/fm-stacked.png";
 import ansibleImg from "../../images/icons/ansible.png";
 import conductorImg from "../../images/icons/conductor.png";
@@ -16,43 +17,43 @@ const imageTiles = [
   {
     name: "Redis",
     img: redisImg,
-    margin: 80
+    margin: 80,
   },
   {
     name: "Python",
     img: pythonImg,
-    margin: 20
+    margin: 20,
   },
   {
     name: "Elastic",
     img: elasticImg,
-    margin: -40
+    margin: -40,
   },
   {
     name: "Conductor",
     img: conductorImg,
-    margin: 20
+    margin: 20,
   },
   {
     name: "Ansible",
     img: ansibleImg,
-    margin: -40
+    margin: -40,
   },
   {
     name: "Terraform",
     img: terraformImg,
-    margin: -100
+    margin: -100,
   },
   {
     name: "Frinx",
     img: frinxImg,
-    margin: -40
+    margin: -40,
   },
   {
     name: "Dynomite",
     img: dynomiteImg,
-    margin: -40
-  }
+    margin: -40,
+  },
 ];
 
 const defAnimation = {
@@ -60,10 +61,12 @@ const defAnimation = {
   opacity: 0,
   type: "from",
   ease: "easeOutQuad",
-  delay: 200
+  delay: 200,
 };
 
 function FrinxMachine() {
+  const { isMobile } = useContext(MobileContext);
+
   return (
     <div className="frinxMachine-wrapper">
       <OverPack playScale={0.3}>
@@ -74,7 +77,7 @@ function FrinxMachine() {
           </TweenOne>
 
           <Grid>
-            <Grid.Row columns={2}>
+            <Grid.Row columns={isMobile ? 1 : 2}>
               <Grid.Column>
                 <TweenOne
                   animation={{
@@ -82,7 +85,7 @@ function FrinxMachine() {
                     opacity: 0,
                     type: "from",
                     ease: "easeOutQuad",
-                    delay: 200
+                    delay: 200,
                   }}
                 >
                   <div className="frinxMachine-image">
@@ -130,32 +133,34 @@ function FrinxMachine() {
                       Check Full Documentation
                     </Button>
                     <br />
-                    {imageTiles.map((tile, i) => {
-                      return (
-                        <TweenOne
-                          animation={{
-                            x: "-=30",
-                            opacity: 0,
-                            type: "from",
-                            ease: "easeOutQuad",
-                            delay: 200 + 100 * i
-                          }}
-                          style={{
-                            width: "50px",
-                            height: "50px",
-                            display: "inline-block",
-                            marginRight: "15px",
-                            backgroundColor: "white",
-                            padding: "10px",
-                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
-                            marginTop: "20px",
-                            borderRadius: "100%"
-                          }}
-                        >
-                          <Image src={tile.img} circular />
-                        </TweenOne>
-                      );
-                    })}
+                    <div className="image-tiles">
+                      {imageTiles.map((tile, i) => {
+                        return (
+                          <TweenOne
+                            animation={{
+                              x: "-=30",
+                              opacity: 0,
+                              type: "from",
+                              ease: "easeOutQuad",
+                              delay: 200 + 100 * i,
+                            }}
+                            style={{
+                              width: "50px",
+                              height: "50px",
+                              display: "inline-block",
+                              marginRight: "15px",
+                              backgroundColor: "white",
+                              padding: "10px",
+                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
+                              marginTop: "20px",
+                              borderRadius: "100%",
+                            }}
+                          >
+                            <Image src={tile.img} circular />
+                          </TweenOne>
+                        );
+                      })}
+                    </div>
                   </div>
                 </TweenOne>
               </Grid.Column>

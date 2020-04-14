@@ -68,3 +68,49 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .@{profile}-wrapper {
+    height: 900px;
+    padding: 20px;
+
+    .@{profile} {
+      &-content {
+        margin: 10px;
+        h2 {
+          font-size: 20px;
+          color: #2185d0;
+          font-family: Quicksand, sans-serif;
+        }
+
+        .license-info {
+          pre {
+            font-size: 16px;
+            max-width: 100%;
+            overflow: scroll;
+            background-color: whitesmoke;
+          }
+
+          .info {
+            margin-bottom: 50px;
+            &-type {
+              span {
+                color: #2185d0;
+                float: right;
+              }
+            }
+          }
+        }
+
+        .settings {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 50px;
+          a {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

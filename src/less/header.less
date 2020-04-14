@@ -3,7 +3,7 @@
 .@{header} {
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 200;
   top: 0;
 
   .home-page {
@@ -50,6 +50,47 @@
     &:hover {
       cursor: pointer;
       color: rgb(211, 211, 211);
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .@{header} {
+    z-index: 200;
+
+    .home-page {
+      padding: 0;
+    }
+
+    &-mobile {
+      line-height: 62px;
+
+      .mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo {
+          width: 110px;
+          img {
+            vertical-align: middle;
+          }
+        }
+
+        &-bars {
+          float: right;
+          color: white !important;
+        }
+      }
+
+      .icon {
+        margin-left: 15px;
+        color: black;
+        &:hover {
+          cursor: pointer;
+          color: rgb(211, 211, 211);
+        }
+      }
     }
   }
 }

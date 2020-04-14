@@ -1,13 +1,13 @@
 import React, { useCallback, useContext } from "react";
 import { Redirect, withRouter } from "react-router";
-import { Button, Checkbox, Form } from "semantic-ui-react";
+import { Button, Checkbox, Form, Message } from "semantic-ui-react";
 import fire from "../config/Fire";
 import { AuthContext } from "./AuthProvider";
 import AuthWrapper from "./AuthWrapper";
 
 function Login(props) {
   const handleLogin = useCallback(
-    async event => {
+    async (event) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
@@ -25,6 +25,15 @@ function Login(props) {
 
   const { currentUser } = useContext(AuthContext);
 
+  const warningMsg = () => (
+    <Message warning>
+      <p>
+        Due to account migration to the new website,{" "}
+        <a href="/reset-password">please reset your password</a>.
+      </p>
+    </Message>
+  );
+
   if (currentUser) {
     return <Redirect to="/" />;
   }
@@ -35,6 +44,7 @@ function Login(props) {
         <div className="form-title">
           <h1>Sign In</h1>
         </div>
+        <div>{warningMsg()}</div>
         <div className="form-box">
           <Form onSubmit={handleLogin}>
             <Form.Field>

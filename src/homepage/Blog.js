@@ -1,18 +1,21 @@
 import axios from "axios";
 import OverPack from "rc-scroll-anim/lib/ScrollOverPack";
 import TweenOne from "rc-tween-one";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Button, Card, Image } from "semantic-ui-react";
+import { MobileContext } from "../common/MobileProvider";
 
 function Blog() {
+  const { isMobile } = useContext(MobileContext);
+
   const [blogPosts, setBlogPosts] = useState([]);
   var settings = {
     arrows: true,
     speed: 500,
     infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: 1,
   };
 
   useEffect(() => {
@@ -22,13 +25,13 @@ function Blog() {
       .get(
         `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${blogAPIKey}`
       )
-      .then(res => {
+      .then((res) => {
         let blogPosts = res?.data?.items || [];
         setBlogPosts(blogPosts);
       });
   }, []);
 
-  const parsePost = post => {
+  const parsePost = (post) => {
     const parser = new DOMParser();
     const html = parser.parseFromString(post.content, "text/html");
     const imgUrl = html.querySelector("img")?.src || "";
@@ -43,7 +46,7 @@ function Blog() {
           opacity: 0,
           type: "from",
           ease: "easeOutQuad",
-          delay: 200
+          delay: 200,
         }}
         className="home-page"
       >
@@ -61,7 +64,7 @@ function Blog() {
                     fluid
                     style={{
                       padding: "10px",
-                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)"
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.15)",
                     }}
                   >
                     <Image
@@ -75,7 +78,7 @@ function Blog() {
                         style={{
                           position: "relative",
                           height: "50px",
-                          overflow: "hidden"
+                          overflow: "hidden",
                         }}
                       >
                         {b.title}

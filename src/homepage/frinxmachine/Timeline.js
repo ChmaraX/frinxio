@@ -10,14 +10,21 @@ const timelineContent = [
     title: "Workflow Orchestration",
     text:
       "FRINX Machine includes workflow orchestration capabilities that allow users to combine multiple tasks into a workflow without writing a single line of code. We package a number of workflows written in Python out of the box and users can create their own customized workflows in their programming language of choice. In addition, we use Elasticsearch and Kibana as our persistence layer for inventory data.",
-    img: fmPerspectiveImg
+    img: fmPerspectiveImg,
   },
   {
     title: "Network wide transactions",
     text:
       "FRINX UniConfig provides the ability to store intent and operational data from services and devices, it enables to commit intent to the network, syncs from the network so that the latest device state is reflected in the controller, compares intended state and operational state and provides device and network wide transactions.",
     img: fmUniconfig,
-    add: <a>> Read about Uniconfig</a>
+    add: (
+      <a
+        href="https://docs.frinx.io/frinx-odl-distribution/oxygen/getting-started.html"
+        target="_blank"
+      >
+        > Read about Uniconfig
+      </a>
+    ),
   },
   {
     title: "Open-source device library",
@@ -37,8 +44,8 @@ const timelineContent = [
           > CLI Units on GitHub
         </a>
       </>
-    )
-  }
+    ),
+  },
 ];
 
 function Timeline(props) {

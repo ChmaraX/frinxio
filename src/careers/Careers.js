@@ -15,7 +15,7 @@ const perks = [
   "Fun team-building events",
   "Cutting-edge design, development and delivery of highly available, scalable and secure networking applications, open source included",
   "Competitive compensation",
-  "Support of personal growth and knowledge sharing"
+  "Support of personal growth and knowledge sharing",
 ];
 
 const positions = [
@@ -38,7 +38,7 @@ const positions = [
       "Testing of software products based on the prior analysis and design",
       "Participation in internal meetings and meetings with clients, reporting",
       "Effective communication and collaboration with other departments and employees of the company, including business partners",
-      "Other tasks as instructed by a superior"
+      "Other tasks as instructed by a superior",
     ],
     jobReq: {
       education: [
@@ -46,7 +46,7 @@ const positions = [
         "Follow-up/Higher Professional Education",
         "University education (Bachelor’s degree)",
         "University education (Master’s degree)",
-        "Education Specialization in IT"
+        "Education Specialization in IT",
       ],
       personal: [
         "Advanced knowledge of JAVA (min 3 years)",
@@ -54,10 +54,10 @@ const positions = [
         "Knowledge or experience with these technologies is an advantage: network and communication protocols, client/server architecture, XML manipulation and parsing, UML, JSON, knowledge of ISO/OSI models, Unix, Maven",
         "Model-driven architecture/ domain-specific languages implementation is an advantage",
         "Willingness and ability to teach and share knowledge",
-        "Knowledge of OpenDaylight technology is an advantage"
+        "Knowledge of OpenDaylight technology is an advantage",
       ],
-      lang: ["English – Upper intrermediate (B2)"]
-    }
+      lang: ["English – Upper intrermediate (B2)"],
+    },
   },
   {
     title: "SOFTWARE DEVELOPER TRAINEE",
@@ -78,7 +78,7 @@ const positions = [
       "Testing of software products based on the prior analysis and design",
       "Participation in internal meetings and meetings with clients, reporting",
       "Effective communication and collaboration with other departments and employees of the company, including business partners",
-      "Other tasks as instructed by a superior"
+      "Other tasks as instructed by a superior",
     ],
     jobReq: {
       education: [
@@ -86,7 +86,7 @@ const positions = [
         "Follow-up/Higher Professional Education",
         "University education (Bachelor’s degree)",
         "University education (Master’s degree)",
-        "Education Specialization in IT"
+        "Education Specialization in IT",
       ],
       personal: [
         "Advanced knowledge of JAVA (min 3 years)",
@@ -94,10 +94,10 @@ const positions = [
         "Knowledge or experience with these technologies is an advantage: network and communication protocols, client/server architecture, XML manipulation and parsing, UML, JSON, knowledge of ISO/OSI models, Unix, Maven",
         "Model-driven architecture/ domain-specific languages implementation is an advantage",
         "Willingness and ability to teach and share knowledge",
-        "Knowledge of OpenDaylight technology is an advantage"
+        "Knowledge of OpenDaylight technology is an advantage",
       ],
-      lang: ["English – Upper intrermediate (B2)"]
-    }
+      lang: ["English – Upper intrermediate (B2)"],
+    },
   },
   {
     title: "SOFTWARE ENGINEER C++",
@@ -118,7 +118,7 @@ const positions = [
       "Testing of software products based on the prior analysis and design",
       "Participation in internal meetings and meetings with clients, reporting",
       "Effective communication and collaboration with other departments and employees of the company, including business partners",
-      "Other tasks as instructed by a superior"
+      "Other tasks as instructed by a superior",
     ],
     jobReq: {
       education: [
@@ -126,7 +126,7 @@ const positions = [
         "Follow-up/Higher Professional Education",
         "University education (Bachelor’s degree)",
         "University education (Master’s degree)",
-        "Education Specialization in IT"
+        "Education Specialization in IT",
       ],
       personal: [
         "Advanced knowledge of JAVA (min 3 years)",
@@ -134,10 +134,10 @@ const positions = [
         "Knowledge or experience with these technologies is an advantage: network and communication protocols, client/server architecture, XML manipulation and parsing, UML, JSON, knowledge of ISO/OSI models, Unix, Maven",
         "Model-driven architecture/ domain-specific languages implementation is an advantage",
         "Willingness and ability to teach and share knowledge",
-        "Knowledge of OpenDaylight technology is an advantage"
+        "Knowledge of OpenDaylight technology is an advantage",
       ],
-      lang: ["English – Upper intrermediate (B2)"]
-    }
+      lang: ["English – Upper intrermediate (B2)"],
+    },
   },
   {
     title: "TEST AUTOMATION ENGINEER",
@@ -159,7 +159,7 @@ const positions = [
       "Testing of software products based on the prior analysis and design",
       "Participation in internal meetings and meetings with clients, reporting",
       "Effective communication and collaboration with other departments and employees of the company, including business partners",
-      "Other tasks as instructed by a superior"
+      "Other tasks as instructed by a superior",
     ],
     jobReq: {
       education: [
@@ -167,7 +167,7 @@ const positions = [
         "Follow-up/Higher Professional Education",
         "University education (Bachelor’s degree)",
         "University education (Master’s degree)",
-        "Education Specialization in IT"
+        "Education Specialization in IT",
       ],
       personal: [
         "Advanced knowledge of JAVA (min 3 years)",
@@ -175,10 +175,10 @@ const positions = [
         "Knowledge or experience with these technologies is an advantage: network and communication protocols, client/server architecture, XML manipulation and parsing, UML, JSON, knowledge of ISO/OSI models, Unix, Maven",
         "Model-driven architecture/ domain-specific languages implementation is an advantage",
         "Willingness and ability to teach and share knowledge",
-        "Knowledge of OpenDaylight technology is an advantage"
+        "Knowledge of OpenDaylight technology is an advantage",
       ],
-      lang: ["English – Upper intrermediate (B2)"]
-    }
+      lang: ["English – Upper intrermediate (B2)"],
+    },
   },
   {
     title: "SOFTWARE ENGINEER PYHTON",
@@ -199,7 +199,7 @@ const positions = [
       "Testing of software products based on the prior analysis and design",
       "Participation in internal meetings and meetings with clients, reporting",
       "Effective communication and collaboration with other departments and employees of the company, including business partners",
-      "Other tasks as instructed by a superior"
+      "Other tasks as instructed by a superior",
     ],
     jobReq: {
       education: [
@@ -207,7 +207,7 @@ const positions = [
         "Follow-up/Higher Professional Education",
         "University education (Bachelor’s degree)",
         "University education (Master’s degree)",
-        "Education Specialization in IT"
+        "Education Specialization in IT",
       ],
       personal: [
         "Advanced knowledge of JAVA (min 3 years)",
@@ -215,10 +215,10 @@ const positions = [
         "Knowledge or experience with these technologies is an advantage: network and communication protocols, client/server architecture, XML manipulation and parsing, UML, JSON, knowledge of ISO/OSI models, Unix, Maven",
         "Model-driven architecture/ domain-specific languages implementation is an advantage",
         "Willingness and ability to teach and share knowledge",
-        "Knowledge of OpenDaylight technology is an advantage"
+        "Knowledge of OpenDaylight technology is an advantage",
       ],
-      lang: ["English – Upper intrermediate (B2)"]
-    }
+      lang: ["English – Upper intrermediate (B2)"],
+    },
   },
   {
     title: "FRONTEND SOFTWARE ENGINEER",
@@ -240,7 +240,7 @@ const positions = [
       "Testing of software products based on the prior analysis and design",
       "Participation in internal meetings and meetings with clients, reporting",
       "Effective communication and collaboration with other departments and employees of the company, including business partners",
-      "Other tasks as instructed by a superior"
+      "Other tasks as instructed by a superior",
     ],
     jobReq: {
       education: [
@@ -248,7 +248,7 @@ const positions = [
         "Follow-up/Higher Professional Education",
         "University education (Bachelor’s degree)",
         "University education (Master’s degree)",
-        "Education Specialization in IT"
+        "Education Specialization in IT",
       ],
       personal: [
         "Advanced knowledge of JAVA (min 3 years)",
@@ -256,23 +256,23 @@ const positions = [
         "Knowledge or experience with these technologies is an advantage: network and communication protocols, client/server architecture, XML manipulation and parsing, UML, JSON, knowledge of ISO/OSI models, Unix, Maven",
         "Model-driven architecture/ domain-specific languages implementation is an advantage",
         "Willingness and ability to teach and share knowledge",
-        "Knowledge of OpenDaylight technology is an advantage"
+        "Knowledge of OpenDaylight technology is an advantage",
       ],
-      lang: ["English – Upper intrermediate (B2)"]
-    }
-  }
+      lang: ["English – Upper intrermediate (B2)"],
+    },
+  },
 ];
 
 function Careers() {
   const [showDetails, setShowDetails] = useState({
     show: false,
     which: null,
-    title: ""
+    title: "",
   });
 
-  const positionTable = positions => (
+  const positionTable = (positions) => (
     <Table>
-      <Table.Header>
+      <Table.Header className="table-header">
         <Table.Row>
           <Table.HeaderCell>
             {" "}
@@ -330,7 +330,7 @@ function Careers() {
     </Table>
   );
 
-  const careerDetails = i => (
+  const careerDetails = (i) => (
     <div className="careers-details">
       <Button circular onClick={() => setShowDetails({ show: false })}>
         Back to list
@@ -342,7 +342,7 @@ function Careers() {
         Job Description
       </h3>
       <div className="careers-details-list">
-        {positions[i].jobDesc.map(jd => {
+        {positions[i].jobDesc.map((jd) => {
           return <p> > {jd}</p>;
         })}
       </div>
@@ -351,7 +351,7 @@ function Careers() {
         Employee perks and benefits
       </h3>
       <div className="careers-details-list">
-        {perks.map(pk => {
+        {perks.map((pk) => {
           return <p> > {pk}</p>;
         })}
       </div>
@@ -361,18 +361,34 @@ function Careers() {
       </h3>
       <div className="careers-details-list">
         <h4>Education</h4>
-        {positions[i].jobReq.education.map(e => (
+        {positions[i].jobReq.education.map((e) => (
           <p> > {e}</p>
         ))}
         <h4>Personal requirements and skills</h4>
-        {positions[i].jobReq.personal.map(p => (
+        {positions[i].jobReq.personal.map((p) => (
           <p> > {p}</p>
         ))}
         <h4>Language skills</h4>
-        {positions[i].jobReq.lang.map(l => (
+        {positions[i].jobReq.lang.map((l) => (
           <p> > {l}</p>
         ))}
       </div>
+      {/* <Divider />
+      <div style={{ width: "500px" }}>
+        <h3>Interested?</h3>
+        <p>Send us your email address and we will reach out to you.</p>
+        <Input
+          action={{
+            color: "teal",
+            labelPosition: "right",
+            icon: "send",
+            content: "Apply",
+          }}
+          fluid
+          placeholder="Your email address"
+          style={{ marginTop: "30px" }}
+        />
+      </div> */}
     </div>
   );
 

@@ -39,6 +39,19 @@
     .@{careers}-content {
       margin-top: 60px;
 
+      h1,
+      h2 {
+        font: 600 30px/45px "Poppins", sans-serif;
+        color: #282835;
+      }
+
+      h3 {
+        color: #2185d0;
+        font-weight: 500;
+        font-size: 1.5em;
+        font-family: Quicksand, sans-serif;
+      }
+
       .@{careers}-details {
         p {
           font-family: "Poppins", sans-serif;
@@ -54,6 +67,23 @@
 
         &-list {
           padding: 5px 0 20px 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .@{careers}-wrapper {
+    .@{careers}-content-wrapper {
+      max-width: 100vw;
+      padding: 20px;
+
+      .@{careers}-content {
+        margin-top: 20px;
+
+        .table-header {
+          display: none;
         }
       }
     }

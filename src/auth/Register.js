@@ -47,6 +47,15 @@ function Register({ history }) {
 
     try {
       await fire.auth().createUserWithEmailAndPassword(email, password);
+      var userC = fire.auth().currentUser;
+      userC
+        .sendEmailVerification()
+        .then(function () {
+          alert(`Verification email sent to ${email}`);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     } catch (error) {
       alert(error);
       return window.location.reload();

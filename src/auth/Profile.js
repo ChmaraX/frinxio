@@ -15,15 +15,23 @@ function Profile({ history }) {
 
   useEffect(() => {
     const email = currentUser.email;
-    axios.get("/license/" + email).then((res) => {
-      let licenseData = res.data;
-      setLicense(licenseData);
-      if (res.data.licenseType.name === "TRIAL") {
-        axios.put("/trial-license", { email }).then((res) => {
-          setLicense({ ...licenseData, licenses: [{ token: res.data.token }] });
-        });
-      }
-    });
+    const creationTime = currentUser.metadata.creationTime;
+    axios
+      .post("/license/" + email, {
+        creationTime: creationTime,
+      })
+      .then((res) => {
+        let licenseData = res.data;
+        setLicense(licenseData);
+        if (res.data.licenseType.name === "TRIAL") {
+          axios.put("/trial-license", { email }).then((res) => {
+            setLicense({
+              ...licenseData,
+              licenses: [{ token: res.data.token }],
+            });
+          });
+        }
+      });
   }, []);
 
   return (

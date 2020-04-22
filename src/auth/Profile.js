@@ -14,6 +14,7 @@ function Profile({ history }) {
   const { isMobile } = useContext(MobileContext);
 
   useEffect(() => {
+    console.log('jenkins job test')
     const email = currentUser.email;
     const creationTime = currentUser.metadata.creationTime;
     axios
